@@ -513,6 +513,9 @@ func (l *LangRefValue) UnmarshalJSON(data []byte) error {
 	case fastjson.TypeString:
 		l.Ref = NilLangRef
 		l.Value = unescape(val.GetStringBytes())
+	default:
+		l.Ref = NilLangRef
+		l.Value = unescape(val.MarshalTo(nil))
 	}
 
 	return nil
