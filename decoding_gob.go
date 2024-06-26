@@ -203,7 +203,7 @@ func unmapObjectProperties(mm map[string][]byte, o *Object) error {
 		}
 	}
 	if raw, ok := mm["attachment"]; ok {
-		if o.Attachment, err = gobDecodeItem(raw); err != nil {
+		if o.Attachment, err = gobDecodeItems(raw); err != nil {
 			return err
 		}
 	}

@@ -479,7 +479,7 @@ func JSONLoadObject(val *fastjson.Value, o *Object) error {
 	o.MediaType = JSONGetMimeType(val, "mediaType")
 	o.Generator = JSONGetItem(val, "generator")
 	o.AttributedTo = JSONGetItem(val, "attributedTo")
-	o.Attachment = JSONGetItem(val, "attachment")
+	o.Attachment = JSONGetItems(val, "attachment")
 	o.Location = JSONGetItem(val, "location")
 	o.Published = JSONGetTime(val, "published")
 	o.StartTime = JSONGetTime(val, "startTime")

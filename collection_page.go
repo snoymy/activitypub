@@ -22,7 +22,7 @@ type CollectionPage struct {
 	Name NaturalLanguageValues `jsonld:"name,omitempty,collapsible"`
 	// Attachment identifies a resource attached or related to an object that potentially requires special handling.
 	// The intent is to provide a model that is at least semantically similar to attachments in email.
-	Attachment Item `jsonld:"attachment,omitempty"`
+	Attachment ItemCollection `jsonld:"attachment,omitempty"`
 	// AttributedTo identifies one or more entities to which this object is attributed. The attributed entities might not be Actors.
 	// For instance, an object might be attributed to the completion of another activity.
 	AttributedTo Item `jsonld:"attributedTo,omitempty"`

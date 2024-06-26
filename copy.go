@@ -59,7 +59,7 @@ func CopyObjectProperties(to, from *Object) (*Object, error) {
 	to.ID = from.ID
 	to.Type = from.Type
 	to.Name = replaceIfNaturalLanguageValues(to.Name, from.Name)
-	to.Attachment = replaceIfItem(to.Attachment, from.Attachment)
+	to.Attachment = replaceIfItemCollection(to.Attachment, from.Attachment)
 	to.AttributedTo = replaceIfItem(to.AttributedTo, from.AttributedTo)
 	to.Audience = replaceIfItemCollection(to.Audience, from.Audience)
 	to.Content = replaceIfNaturalLanguageValues(to.Content, from.Content)
