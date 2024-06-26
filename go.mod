@@ -1,4 +1,4 @@
-module github.com/go-ap/activitypub
+module github.com/snoymy/activitypub
 
 go 1.18
 
